@@ -11,11 +11,16 @@ img{
 }
 
 label{
+    padding: 10px;
     padding-right: 5vw;
+    height: 10vh;
     display: flex;
     justify-content: space-between;
     border-bottom: 0.5vh solid black;
     cursor: pointer;
+    background-color: rgb(237, 237, 237);
+    border-radius: 20rem;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 10);
 }
 
 .container{
@@ -46,7 +51,7 @@ label{
 
 .accordion-item .content{
     overflow: hidden;
-    transition: max-height 0.3s;
+    transition: max-height 1s;
     max-height: 0;
 }
 
@@ -62,14 +67,20 @@ label{
     max-height: 100vh;
 }
 
+.accordion-item input:hover ~ .content{
+    max-height: 100vh;
+    transition: max-height 1s;
+}
+
 .accordion-text{
     font-size: 100%;
-    color: rgb(34, 74, 107);
+    color: rgb(0, 107, 194);
 }
 
 
 .content{
     margin-top: 3vh;
+    padding-bottom: 5vh;
     display: flex;
     justify-content: center;
 }
@@ -114,10 +125,11 @@ label{
     }
 
     .accordion label::after {
-        display: block;  
+        display: block;
         content: "\25b6";
         font-size: 300%;
     }
+
     .container{
          max-width: 80vw;
     }
