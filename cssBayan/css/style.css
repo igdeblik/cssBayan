@@ -11,22 +11,33 @@ img{
 }
 
 label{
-    display: block;
-    border-bottom: 1px solid black;
+    padding-right: 5vw;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.5vh solid black;
+    cursor: pointer;
 }
 
 .container{
     max-width: 90vw;
-    margin: 20px auto;
+    margin: 5vh auto;
 }
 
 .header{
-    border-bottom: 1px solid black;
+    border-bottom: 0.7vh solid black;
+    margin-bottom: 5vh;
+}
+
+.header-name-task{
+    font-size: 200%;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
 }
 
 .accordion{
-    background-color: bisque;
-    margin-top: 10px;
+}
+
+.accordion-item{
 }
 
 .accordion-item input{
@@ -39,8 +50,21 @@ label{
     max-height: 0;
 }
 
+.accordion label::after {
+    display: block;  
+    content: "\25b6";
+    font-size: 100%;
+}
+
+.accordion-item input:checked ~ label::after { transform: rotate(90deg); }
+
 .accordion-item input:checked ~ .content{
     max-height: 100vh;
+}
+
+.accordion-text{
+    font-size: 100%;
+    color: rgb(34, 74, 107);
 }
 
 
@@ -48,4 +72,54 @@ label{
     margin-top: 3vh;
     display: flex;
     justify-content: center;
+}
+
+
+@media (min-width: 820px) and (max-width: 1920px) { 
+    .header-name-task{
+        font-size: 250% ;
+    }
+
+    .accordion-text{
+        font-size: 150%;
+    }
+
+    img{
+        width: 50%;
+    }
+
+    .accordion label::after {
+        display: block;  
+        content: "\25b6";
+        font-size: 150%;
+    }
+
+}
+
+@media (min-width: 1920px){
+    .container{
+        max-width: 60vw;
+    }
+
+    .header-name-task{
+        font-size: 500% ;
+    }
+
+    .accordion-text{
+        font-size: 350%;
+    }
+
+    img{
+        width: 50%;
+    }
+
+    .accordion label::after {
+        display: block;  
+        content: "\25b6";
+        font-size: 300%;
+    }
+    .container{
+         max-width: 80vw;
+    }
+
 }
