@@ -1,3 +1,52 @@
 *{
     box-sizing: border-box;
 }
+
+body{
+    background-color: rgb(252, 249, 244);
+}
+
+img{
+    width: 80vw;
+}
+
+label{
+    display: block;
+    background-color: aqua;
+    border-bottom: 1px solid black;
+}
+
+.container{
+    max-width: 90vw;
+    margin: 20px auto;
+}
+
+.header{
+    border-bottom: 1px solid black;
+}
+
+.accordion{
+    background-color: bisque;
+    margin-top: 10px;
+}
+
+.accordion-item input{
+    display: none;
+}
+
+.accordion-item .content{
+    overflow: hidden;
+    transition: max-height 0.3s;
+    max-height: 0;
+}
+
+.accordion-item input:checked ~ .content{
+    max-height: 100vh;
+}
+
+
+.content{
+    margin-top: 3vh;
+    display: flex;
+    justify-content: center;
+}
