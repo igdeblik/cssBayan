@@ -1,0 +1,118 @@
+    /*Верстка под 320px */
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        background-color: rgb(255, 247, 231);
+    }
+    img{
+        max-width: 50vw ;
+        margin: 10vh;
+    }
+    label{
+        padding: 0 10vw 0 10vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 10vh;
+        background-color: #f7fdff;
+    }
+    .container{
+        max-width: 80vw;
+        margin: 5vh auto;
+    }
+    .header{
+        border-bottom: 0.7vh solid black;
+        margin-bottom: 5vh;
+    }
+    .header-name-task{
+        font-size: 200%;
+        font-weight: 700;
+        color: rgb(0, 0, 0);
+    }
+    .accordion{
+        box-shadow: 0 0 10vw 0 rgba(0, 0, 0, 0.5)
+    }
+    .accordion-item input{
+        display: none;
+    }
+    .accordion-text{
+        font-size: 200%;
+        color: rgb(0, 114, 195);
+    }
+    .content{
+        display: flex;
+        justify-content: center;
+        transition: max-height 1s;
+        max-height: 0;
+        background-color:#f7fdff;   
+    }
+    .plus{
+        display: block;
+        font-size: 200%;
+        transition: 0.3s;
+    }
+    .accordion-item input:checked ~ label > .plus{
+        transform: rotate(-90deg); 
+    }
+    .accordion-item  input:checked ~ .content{
+        max-height: 100vh;
+    }
+    .content{
+        display: flex;
+        justify-content: center;
+        border-bottom: 0.5vh solid black;
+    }
+
+    /* Верстка под 820px  */
+
+    @media screen and (min-width: 820px){
+        .header-name-task{
+            font-size: 250%;
+        }
+        .accordion-text{
+            font-size: 250%;
+        }
+        .plus{
+            font-size: 250%;
+        }
+    }
+    
+    /* Верстка под 1920px  */
+
+    @media screen and (min-width: 1920px){
+        img{
+            width: 30vw;
+        }
+        .header-name-task{
+            font-size: 300%;
+        }
+        .accordion-text{
+            font-size: 300%;
+        }
+        
+        /* Верстка под устройства поддерживающие Hover */
+
+    }
+    @media screen and (hover:hover){
+        .accordion{
+            cursor: pointer;
+        }
+        label{
+            cursor: pointer;
+        }
+        .accordion-item input:hover ~ .content{
+            max-height: 100vh;
+        }
+        .plus{
+            display: none;
+            font-size: 300%;
+        }
+        .accordion:hover * {
+            color: black;
+        }
+        .accordion:hover label > .plus{
+            display: block;
+        }
+    }
+    
