@@ -95,6 +95,9 @@
 
     }
     @media screen and (hover:hover){
+        .accordion{
+            cursor: pointer;
+        }
         label{
             cursor: pointer;
         }
